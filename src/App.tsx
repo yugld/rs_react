@@ -1,13 +1,17 @@
+import { AppProvider } from '@context';
 import { BaseLayout } from '@layouts';
 import Home from '@pages/Home';
 
 function App() {
   return (
     <>
-      <BaseLayout>
-        <Header />
-        <Home />
-      </BaseLayout>
+      {' '}
+      <AppProvider>
+        <BaseLayout>
+          <Header />
+          <Home />
+        </BaseLayout>
+      </AppProvider>
     </>
   );
 }
