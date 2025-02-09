@@ -9,6 +9,12 @@ type HomeProps = {
 const Home = ({ children }: HomeProps) => {
   const context = useContext(AppContext);
 
+  if (!context) {
+    throw new Error('Home must be used within an AppProvider');
+  }
+
+  const { isLoading, error } = context;
+
   return (
     <main className="flex flex-1 flex-col gap-4">
       <div className="flex-1">
