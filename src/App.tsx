@@ -1,8 +1,13 @@
-import { Boooo } from '@components';
+import { BaseLayout } from '@layouts';
+import Home from '@pages/Home';
+
 function App() {
   return (
     <>
-      <Boooo />
+      <BaseLayout>
+        <Header />
+        <Home />
+      </BaseLayout>
     </>
   );
 }
